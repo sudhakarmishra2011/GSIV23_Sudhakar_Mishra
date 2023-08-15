@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { getApiConfiguration } from './store/homeSlice';
 import axios from 'axios';
 import { useEffect } from 'react';
