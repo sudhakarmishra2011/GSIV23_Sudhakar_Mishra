@@ -1,0 +1,37 @@
+.headerContainer{
+    display: flex ;
+    justify-content: space-between;
+    margin: auto;
+    padding: 5px;
+    height: 50px;
+    box-shadow: 0 -5px 3px -3px #9B9B9B, 0 5px 3px -3px #9B9B9B;
+}
+
+.searchContainer{
+    width: 50%;
+    margin-left: 20px;
+    padding-top: 2px;
+}
+
+.searchContainer input{
+border: none;
+height: 90%;
+width: 100%;
+border-radius: 10px;
+background-color: #DFDFDF;
+}
+
+.homeIconContainer{
+    margin-right: 20px;
+}
+
+.homeIconContainer img{
+height: 80%;
+}
+
+
+.icon {
+    padding-left: 25px;
+    background: url("../../assets/search.png") no-repeat left;
+    background-size: 20px;
+  }
