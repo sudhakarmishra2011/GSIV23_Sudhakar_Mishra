@@ -1,0 +1,19 @@
+.detailPageContainer{
+    border: 1px solid red;
+    width: 100%;
+}
+
+.movieCard{
+    padding: 20px;
+    display: flex;
+}
+
+.movieDetailsRight{
+    /* border: 1px solid blue; */
+    width: 100%;
+    margin-left: 15px;
+}
+
+.titleRating{
+    display: flex;
+}

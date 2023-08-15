@@ -1,15 +1,19 @@
 import React from 'react'
 import './style.css'
-import logo from '../../assets/spiderman.jpg'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 const Card = ({data}) => {
-    console.log(data)
+    const navigate = useNavigate();
     let url = "https://image.tmdb.org/t/p/original";
+
+    const gotoDetailsPage = (id) => {
+          navigate(`/details/${id}`)
+      };
 
   return (
    <div className="cardContainer">
     {data && data.map && data.map((dt)=>
-        <div className="cardElement" key={dt.id}>
+        <div className="cardElement" key={dt.id} onClick={()=>gotoDetailsPage(dt.id)}>
         <div className="movieImage">
         <img src={url + dt.poster_path} height={150} alt='img'/>
         </div>

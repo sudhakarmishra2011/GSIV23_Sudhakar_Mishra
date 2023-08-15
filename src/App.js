@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getApiConfiguration } from './store/homeSlice';
 import axios from 'axios';
 import { useEffect } from 'react';
+import Detail from './components/DetailsPage/Detail';
 
 function App() {
   const dispatch = useDispatch()
@@ -42,6 +43,8 @@ const fetchDataFromApi = async() => {
       <Routes>
         <Route>
           <Route path='/' element={<Home />} />
+          <Route path="/details/:id" element={<Detail />} />
+          {/* <Route path="*" element={<PageNotFound />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
