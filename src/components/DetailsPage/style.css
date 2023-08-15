@@ -1,11 +1,11 @@
 .detailPageContainer{
-    border: 1px solid red;
     width: 100%;
 }
 
 .movieCard{
-    padding: 20px;
+    padding: 25px;
     display: flex;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .movieDetailsRight{

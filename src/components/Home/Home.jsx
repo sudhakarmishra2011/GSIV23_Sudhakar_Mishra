@@ -3,7 +3,7 @@ import './style.css'
 import Card from '../Card/Card'
 import { useSelector, useDispatch } from 'react-redux'
 import axios from 'axios'
-import updateState, { getApiConfiguration } from '../../store/homeSlice'
+import { getApiConfiguration } from '../../store/homeSlice'
 import arrow_forward from '../../assets/arrow_forward.png'
 import arro_back from '../..//assets/arrow_back.png'
 
@@ -42,7 +42,7 @@ const fetchNextPageData = async(val) => {
         <Card data={data}/>
     </div>
     <div className="footer">
-    <div className="previousPage" onClick={(e) => fetchNextPageData("-")}>
+    <div className="arrowBackPage" onClick={(e) => fetchNextPageData("-")}>
         <img src={arro_back} alt="previousPage" />
         </div>
         <div className="arrowNextPage" onClick={(e) => fetchNextPageData("+")}>

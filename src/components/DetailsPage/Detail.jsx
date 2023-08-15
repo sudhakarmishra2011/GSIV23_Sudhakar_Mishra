@@ -16,27 +16,25 @@ const Detail = () => {
             return null;
     })
 
-    console.log(selectedMovie)
-
     return (
         <div className="detailPageContainer">
-            <div className="movieCard">
+            {data && data.map && <div className="movieCard">
                 <div className="moviePoster">
                     <img src={url + selectedMovie[0].poster_path} height={300} alt='img' />
                 </div>
                 <div className="movieDetailsRight">
                     <div className="titleRating">
                         <div className="movieName">{selectedMovie[0]?.title || ''}</div>
-                        <div className="movieRating">({selectedMovie[0].vote_average.toFixed(1)  || ''})</div>
+                        <div className="movieRating">({selectedMovie[0].vote_average.toFixed(1) || ''})</div>
                     </div>
                     <div className="yearLengthDirector">
-                        {selectedMovie[0].release_date.substring(0,4)}
+                        {selectedMovie[0].release_date.substring(0, 4)}
                     </div>
                     <div className="movieDescription">
-                        Description : {selectedMovie[0].overview  || ''}
+                        Description : {selectedMovie[0].overview || ''}
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }
