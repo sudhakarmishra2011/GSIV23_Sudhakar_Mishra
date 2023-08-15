@@ -9,7 +9,7 @@
 
 .searchContainer{
     width: 50%;
-    margin-left: 20px;
+    margin-left: 30px;
     padding-top: 2px;
 }
 
@@ -36,3 +36,11 @@ height: 80%;
     background: url("../../assets/search.png") no-repeat left;
     background-size: 20px;
   }
+
+.movieDetailsTitle{
+    color: #4A4A4A;
+    margin-left: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px;
+}

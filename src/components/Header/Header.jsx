@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './style.css'
 import homeIcon from '../../assets/home.png'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,useLocation } from 'react-router-dom'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { getApiConfiguration } from '../../store/homeSlice';
@@ -9,6 +9,8 @@ import { getApiConfiguration } from '../../store/homeSlice';
 const Header = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const params = useLocation()
+  console.log(params)
 
   let [query, setQuery] = useState('')
 
@@ -57,9 +59,15 @@ const Header = () => {
 
   return (
     <div className='headerContainer'>
+      {params.pathname !== "/" ? (
+      <div className='movieDetailsTitle'>Movie Details</div>
+      ) 
+      : (
       <div className="searchContainer">
         <input type='text' className="icon" placeholder='Search' onChange={(e) => setQuery(e.target.value)} onKeyUp={searchQueryHandler} />
       </div>
+      )
+      }
       <div className="homeIconContainer" onClick={() => navigate("/")}>
         <img src={homeIcon} alt='homeIcon' className='homeIcon' />
       </div>
