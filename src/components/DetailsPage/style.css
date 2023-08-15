@@ -17,3 +17,24 @@
 .titleRating{
     display: flex;
 }
+
+.movieName{
+    font-size: 24px;
+    font-weight: 500;
+    padding-right: 5px;
+}
+
+.movieRating{
+    font-size: 24px;
+    color: #4a4a4a;
+}
+
+.yearLengthDirector{
+    color: #4a4a4a;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.movieDescription{
+
+}

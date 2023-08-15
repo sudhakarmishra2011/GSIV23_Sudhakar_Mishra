@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const Detail = () => {
-    const params = useParams();
     const { data } = useSelector((state) => state.home)
+    const params = useParams();
     console.log(data)
     let url = "https://image.tmdb.org/t/p/original";
 
@@ -26,14 +26,14 @@ const Detail = () => {
                 </div>
                 <div className="movieDetailsRight">
                     <div className="titleRating">
-                        <div className="movieName">{selectedMovie[0].title}</div>
-                        <div className="movieRating">({selectedMovie[0].vote_average})</div>
+                        <div className="movieName">{selectedMovie[0]?.title || ''}</div>
+                        <div className="movieRating">({selectedMovie[0].vote_average.toFixed(1)  || ''})</div>
                     </div>
                     <div className="yearLengthDirector">
                         {selectedMovie[0].release_date.substring(0,4)}
                     </div>
                     <div className="movieDescription">
-                        {selectedMovie[0].overview}
+                        Description : {selectedMovie[0].overview  || ''}
                     </div>
                 </div>
             </div>

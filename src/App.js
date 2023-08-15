@@ -15,7 +15,7 @@ function App() {
     fetchDataFromApi();
   })
 
-const BASE_URL = "https://api.themoviedb.org/3/trending/all/day";
+const BASE_URL = "https://api.themoviedb.org/3/movie/upcoming";
 const TMDB_TOKEN = process.env.REACT_APP_TMDB_TOKEN;
 
 const headers = {
@@ -44,7 +44,6 @@ const fetchDataFromApi = async() => {
         <Route>
           <Route path='/' element={<Home />} />
           <Route path="/details/:id" element={<Detail />} />
-          {/* <Route path="*" element={<PageNotFound />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>

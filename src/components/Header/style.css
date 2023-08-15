@@ -23,6 +23,7 @@ background-color: #DFDFDF;
 
 .homeIconContainer{
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .homeIconContainer img{
