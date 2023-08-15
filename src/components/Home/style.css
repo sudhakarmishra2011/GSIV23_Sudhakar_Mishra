@@ -9,3 +9,11 @@
         margin-left: 20px;
     }
 }
+
+.footer{
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-left:5%;
+    width: 90%;
+}
