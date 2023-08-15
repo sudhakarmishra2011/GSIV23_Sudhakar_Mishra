@@ -1,4 +1,11 @@
 .HomeContainer{
-    width: 98%;
-    margin-left: 20px;
+    width: 100%;
+    display: flex;
+}
+
+@media only screen and (min-width: 512px) {
+    .HomeContainer{
+        width: 98%;
+        margin-left: 20px;
+    }
 }
